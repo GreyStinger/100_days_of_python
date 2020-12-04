@@ -3,76 +3,31 @@
 import random
 import os
 import time
+import hangman_art
+import hangman_words
 
 
 def main():
-    hangman_art = ['''
-      +---+
-      |   |
-          |
-          |
-          |
-          |
-    =========''', '''
-      +---+
-      |   |
-      O   |
-          |
-          |
-          |
-    =========''', '''
-      +---+
-      |   |
-      O   |
-      |   |
-          |
-          |
-    =========''', '''
-      +---+
-      |   |
-      O   |
-     /|   |
-          |
-          |
-    =========''', '''
-      +---+
-      |   |
-      O   |
-     /|\  |
-          |
-          |
-    =========''', '''
-      +---+
-      |   |
-      O   |
-     /|\  |
-     /    |
-          |
-    =========''', '''
-      +---+
-      |   |
-      O   |
-     /|\  |
-     / \  |
-          |
-    =========''']
 
-    word_list = ["aardvark", "baboon", "camel"]
+    stages = hangman_art.stages
+
+    word_list = hangman_words.word_list
 
     chosen_word = list(random.choice(word_list))
     word_length = len(chosen_word)
     display_list = []
     death = 0
 
-    for n in range(word_length):
-        display_list.append("_")
+    for _ in range(word_length):
+        display_list += "_"
 
-    while_loop_main(display_list, hangman_art, word_length, chosen_word, death)
+    while_loop_main(display_list, stages, word_length, chosen_word, death)
 
 
-def while_loop_main(display_list, hangman_art, word_length, chosen_word, death):
+def while_loop_main(display_list, stages, word_length, chosen_word, death):
 
     display = ""
+    guessed_words = ""
 
     while display_list.count("_") != 0 and death != 6:
         display = ""
@@ -80,6 +35,8 @@ def while_loop_main(display_list, hangman_art, word_length, chosen_word, death):
         guess = input("Guess a letter from a to z.\n: ").lower()
 
         clear()
+
+        guessed_words += guess + '-'
 
         for position in range(word_length):
             letter = chosen_word[position]
@@ -94,10 +51,11 @@ def while_loop_main(display_list, hangman_art, word_length, chosen_word, death):
 
         print(display)
 
-        print(hangman_art[death])
+        print(stages[death])
         print('')
         print(f"Your life count is {6 - death}")
         print('')
+        print(f"Your guessed words are {guessed_words}")
 
     if death == 6:
         print("You Lose! Try Again.")
