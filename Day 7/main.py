@@ -29,6 +29,8 @@ def while_loop_main(display_list, stages, word_length, chosen_word, death):
     display = ""
     guessed_words = ""
 
+    print(hangman_art.logo)
+
     while display_list.count("_") != 0 and death != 6:
         display = ""
 
@@ -36,7 +38,7 @@ def while_loop_main(display_list, stages, word_length, chosen_word, death):
 
         clear()
 
-        guessed_words += guess + '-'
+        guessed_words += guess + ', '
 
         for position in range(word_length):
             letter = chosen_word[position]
@@ -44,18 +46,20 @@ def while_loop_main(display_list, stages, word_length, chosen_word, death):
                 display_list[position] = letter
 
         if guess not in display_list:
-            death = death + 1
+            death += 1
 
         for letter in display_list:
             display += letter
 
+        print('')
         print(display)
-
+        print('')
         print(stages[death])
         print('')
         print(f"Your life count is {6 - death}")
         print('')
         print(f"Your guessed words are {guessed_words}")
+        print('')
 
     if death == 6:
         print("You Lose! Try Again.")
@@ -65,6 +69,7 @@ def while_loop_main(display_list, stages, word_length, chosen_word, death):
         print("You Win!")
         print(f"The word was: {display}")
         time.sleep(20)
+        quit()
 
 
 def clear():
