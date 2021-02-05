@@ -1,7 +1,11 @@
 # -*- Encoding:UTF-8 -*-
 
-from os import system
+from os import system, name
 
 
 def clear():
-    system('cls')
+    if name == 'nt':
+        _ = system('cls')
+
+    else:
+        _ = system('clear')
