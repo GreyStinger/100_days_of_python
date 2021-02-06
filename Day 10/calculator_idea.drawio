@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-02-06T11:30:02.009Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.150 Safari/537.36" etag="lBNFFr5gnZHOteMVEuUo" version="14.2.9" type="github">
+<mxfile host="app.diagrams.net" modified="2021-02-06T11:31:26.380Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.150 Safari/537.36" etag="C2985XSO6c5gjqTrO9T6" version="14.2.9" type="github">
   <diagram id="o1sKu1jpbNbeaetWaV6L" name="Page-1">
     <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -58,7 +58,7 @@
         <mxCell id="2rsVLe3R_XvaNPSrzZ8c-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="2rsVLe3R_XvaNPSrzZ8c-9" target="2rsVLe3R_XvaNPSrzZ8c-7">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="2rsVLe3R_XvaNPSrzZ8c-9" value="Ask the user if they want to start a new calculation or use the last answer as one of the numbers" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="2rsVLe3R_XvaNPSrzZ8c-9" value="Ask the user if they want to use the last answer as one of the numbers or&amp;nbsp;start a new calculation" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="354" y="620" width="120" height="80" as="geometry" />
         </mxCell>
       </root>
