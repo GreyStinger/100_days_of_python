@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="572409c1-a6e9-4e92-9551-9966786fb3b2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/art.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/days_in_month.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/title names.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Day 10.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Day 10.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/art.py" beforeDir="false" afterPath="$PROJECT_DIR$/art.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +82,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612537652071</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="added files in preparation for final task">
+      <created>1612609381556</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1612609381556</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -103,6 +107,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="updates" />
-    <option name="LAST_COMMIT_MESSAGE" value="updates" />
+    <MESSAGE value="added files in preparation for final task" />
+    <option name="LAST_COMMIT_MESSAGE" value="added files in preparation for final task" />
   </component>
 </project>
