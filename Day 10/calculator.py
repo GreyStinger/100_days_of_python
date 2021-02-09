@@ -1,6 +1,7 @@
-import grey
-import art
 import time
+
+import art
+import grey
 
 
 def add(n1, n2):

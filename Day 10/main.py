@@ -1,6 +1,7 @@
+import time
+
 import calculator
 import grey
-import time
 
 print("Starting\n")
 time.sleep(1)
