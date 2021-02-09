@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="572409c1-a6e9-4e92-9551-9966786fb3b2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/calculator.py" beforeDir="false" afterPath="$PROJECT_DIR$/calculator.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,7 +40,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Python Scripts/playing_around_with_dis" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunManager">
@@ -125,7 +124,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612872365890</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Code Reformatting">
+      <created>1612872708504</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1612872708504</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -148,6 +154,7 @@
     <MESSAGE value="Program written and tested" />
     <MESSAGE value="Added a calculation history for a continued calculation" />
     <MESSAGE value="Created a separate file for the main part of the calculator for integration into later projects. Made main.py easy to read." />
-    <option name="LAST_COMMIT_MESSAGE" value="Created a separate file for the main part of the calculator for integration into later projects. Made main.py easy to read." />
+    <MESSAGE value="Code Reformatting" />
+    <option name="LAST_COMMIT_MESSAGE" value="Code Reformatting" />
   </component>
 </project>
