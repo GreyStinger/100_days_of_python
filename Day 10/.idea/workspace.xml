@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="572409c1-a6e9-4e92-9551-9966786fb3b2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/calculator.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
@@ -110,7 +111,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612803509082</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added a calculation history for a continued calculation">
+      <created>1612871632887</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1612871632887</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -131,6 +139,7 @@
     <MESSAGE value="added files in preparation for final task" />
     <MESSAGE value="Beginning of of final task updates" />
     <MESSAGE value="Program written and tested" />
-    <option name="LAST_COMMIT_MESSAGE" value="Program written and tested" />
+    <MESSAGE value="Added a calculation history for a continued calculation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added a calculation history for a continued calculation" />
   </component>
 </project>
