@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="572409c1-a6e9-4e92-9551-9966786fb3b2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/grey.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
@@ -42,7 +41,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.XML" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
@@ -104,7 +103,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612625582185</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Program written and tested">
+      <created>1612803509082</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1612803509082</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -124,6 +130,7 @@
     <MESSAGE value="updates" />
     <MESSAGE value="added files in preparation for final task" />
     <MESSAGE value="Beginning of of final task updates" />
-    <option name="LAST_COMMIT_MESSAGE" value="Beginning of of final task updates" />
+    <MESSAGE value="Program written and tested" />
+    <option name="LAST_COMMIT_MESSAGE" value="Program written and tested" />
   </component>
 </project>
