@@ -1,10 +1,3 @@
-import grey
-import random
+import blackjack
 
-
-def main():
-    pass
-
-
-if __name__ == '__main__':
-    main()
+blackjack.main()
