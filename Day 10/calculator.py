@@ -52,7 +52,7 @@ def main():
             num1 = previous_answer
             print(f"Your last answer and now first number is {previous_answer}")
         else:
-            num1 = int(input("What's the first number?: "))
+            num1 = float(input("What's the first number?: "))
         print("")
 
         for key in operations:
@@ -67,7 +67,7 @@ def main():
             time.sleep(8)
             continue
 
-        num2 = int(input("What's the second number?: "))
+        num2 = float(input("What's the second number?: "))
         print("")
 
         answer = operations[operation_symbol](num1, num2)
