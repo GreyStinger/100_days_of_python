@@ -33,7 +33,13 @@ def compare():
         current_compare = select_new_comparison(accounts=accounts)
         score = 0
         failed = False
-        while failed is False:
+        won = False
+        while failed is False and won is False:
+
+            if accounts.count() < 2:
+                print("You win, there are no more items for you to guess now.")
+                won = True
+                continue
 
             current_against = select_new_comparison(accounts)
             higher_comparison = higher(current_compare['follower_count'], current_against['follower_count'])
@@ -85,5 +91,3 @@ def compare():
 
 if __name__ == '__main__':
     compare()
-
-# TODO: Add a system that if there are no more lists to compare then the player has won.
