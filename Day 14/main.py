@@ -36,7 +36,7 @@ def compare():
         won = False
         while failed is False and won is False:
 
-            if accounts.count() < 2:
+            if len(accounts) < 2:
                 print("You win, there are no more items for you to guess now.")
                 won = True
                 continue
@@ -44,7 +44,6 @@ def compare():
             current_against = select_new_comparison(accounts)
             higher_comparison = higher(current_compare['follower_count'], current_against['follower_count'])
 
-            print(current_compare, current_against)
             print(f"{art.logo}\n")
 
             if score != 0:
