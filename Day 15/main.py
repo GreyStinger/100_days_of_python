@@ -11,20 +11,21 @@ console = Console()
 
 
 def passwd_verification(uname, passwd):
-    key_check = hashlib.pbkdf2_hmac(
-        'sha256',
-        passwd.encode('utf-8'),
-        data.passwords[uname]['hash_key'][:32],
-        data.passwords['iterations'],
-        dklen=256
-    )
+    if uname in data.passwords:
+        key_check = hashlib.pbkdf2_hmac(
+            'sha256',
+            passwd.encode('utf-8'),
+            data.passwords[uname]['hash_key'][:32],
+            data.passwords['iterations'],
+            dklen=256
+        )
 
-    if key_check == data.passwords[uname]['hash_key'][32:]:
-        if_validated = True
+        if key_check == data.passwords[uname]['hash_key'][32:]:
+            return True
+        else:
+            return False
     else:
-        if_validated = False
-
-    return if_validated
+        return False
 
 
 def make(coffee):
@@ -144,12 +145,13 @@ def main():
             'cappuccino': cappuccino_in_stock
         }
 
-        if user_input == 'report' or user_input == 'restock':
+        if user_input == 'admin':
             print('Password verification required for system modification.')
             uname_in = str(input('\nPlease enter your username: '))
             passwd_in = str(input('Please enter your password: '))
             passwd_val = passwd_verification(uname=uname_in, passwd=passwd_in)
             if passwd_val is True:
+                user_input = str(input('What would you like to do: '))
                 if user_input == 'report':
                     report_table = report_table_func()
                     while True:
@@ -163,14 +165,17 @@ def main():
                     console.print('Successfully registered [bold dark_red]restock[/bold dark_red]')
                     sleep(2)
             else:
-                print('Password was incorrect.')
-                sleep(14)
+                print('Username or Password was incorrect.')
+                sleep(4)
         elif user_input in data.MENU and out_of_stock_check[user_input] is True:
             total_money = money_count()
             change = total_money - data.MENU[user_input]['cost']
             if change >= 0:
                 print(f'\nYour change is ${change}')
-                print(f'\nMaking a {user_input}')
+                if user_input != 'espresso':
+                    print(f'\nMaking a {user_input}.')
+                else:
+                    print(f'Making an {user_input}.')
                 data.resources['money'] += total_money - change
                 make(coffee=user_input)
                 sleep(4)
