@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="572409c1-a6e9-4e92-9551-9966786fb3b2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/Day 10.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Day 10.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/calculator.py" beforeDir="false" afterPath="$PROJECT_DIR$/calculator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Day 15/data.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Day 15/data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Day 15/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Day 15/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +43,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Day 11" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Python Scripts/tests" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunManager">
