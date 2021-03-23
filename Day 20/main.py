@@ -20,9 +20,6 @@ def window(left, right, new, end):
     return screen
 
 
-window = window(left=snake.left, right=snake.right, new=snake.new_snake, end=snake.end)
-
-
 def main():
     while snake.play:
         snake.move()
@@ -30,3 +27,5 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+window = window(left=snake.left, right=snake.right, new=snake.new_snake, end=snake.end)
