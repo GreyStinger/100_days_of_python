@@ -1,12 +1,13 @@
 from turtle import Screen
 import snake as s
+import food as f
 
 
 def main():
     def window():
         window_mk = Screen()
         window_mk.tracer(0)
-        window_mk.setup(width=480, height=480)
+        window_mk.setup(width=440, height=440)
         window_mk.bgcolor('black')
         window_mk.title('Snake')
         window_mk.mode('logo')
@@ -15,6 +16,7 @@ def main():
     screen = window()
 
     snake = s.Snake()
+    food = f.Food()
 
     screen.listen()
     screen.onkeypress(key='a', fun=snake.left)
@@ -26,6 +28,11 @@ def main():
 
     while snake.play:
         snake.move()
+
+        if snake.snake_head.distance(food) <= 2:
+            food.food_repos()
+            snake.new_snake()
+
         screen.update()
 
 

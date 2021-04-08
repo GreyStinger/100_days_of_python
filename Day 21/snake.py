@@ -16,7 +16,6 @@ def snake_create(coords, heading=90.0):
     snake_section.shape('square')
     snake_section.goto(coords)
     snake_section.setheading(heading)
-    snake_section.shapesize(outline=1)
     return snake_section
 
 
