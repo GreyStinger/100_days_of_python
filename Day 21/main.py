@@ -44,10 +44,9 @@ def main():
                     snake.snake_head.ycor() < -222:
                 snake.died = True
 
-            for snake_segment in snake.snake:
-                if snake_segment != snake.snake_head:
-                    if snake.snake_head.distance(snake_segment) <= 0:
-                        snake.died = True
+            for snake_segment in snake.snake[1:]:
+                if snake.snake_head.distance(snake_segment) <= 0:
+                    snake.died = True
 
         if snake.died:
             board.game_over()
