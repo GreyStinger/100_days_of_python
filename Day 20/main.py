@@ -6,7 +6,7 @@ def main():
     def window():
         window_mk = Screen()
         window_mk.tracer(0)
-        window_mk.setup(width=500, height=500)
+        window_mk.setup(width=480, height=480)
         window_mk.bgcolor('black')
         window_mk.title('Snake')
         window_mk.mode('logo')
