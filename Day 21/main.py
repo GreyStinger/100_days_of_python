@@ -1,8 +1,5 @@
 from turtle import Screen
-import snake as s
-import food as f
-import scoreboard as b1
-import boarder as b2
+from core import food as f, boarder as b2, snake as s, scoreboard as b1
 
 
 def main():
