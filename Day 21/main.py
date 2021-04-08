@@ -1,4 +1,5 @@
 from turtle import Screen
+
 from core import food as f, boarder as b2, snake as s, scoreboard as b1
 
 
@@ -41,7 +42,6 @@ def main():
 
             if snake.snake_head.xcor() > 222 or snake.snake_head.ycor() > 222 or snake.snake_head.xcor() < -222 or \
                     snake.snake_head.ycor() < -222:
-
                 snake.play = False
                 snake.died = True
 
