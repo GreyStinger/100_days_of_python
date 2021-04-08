@@ -24,6 +24,8 @@ class Snake:
         self.snake = [snake_create(coords) for coords in START_COORDINATES]
         self.snake_head = self.snake[0]
         self.play = True
+        self.died = False
+        self.quit = False
 
     def new_snake(self):
         self.snake.append(snake_create(self.snake[-1].pos(), self.snake[-1].heading()))
@@ -46,3 +48,4 @@ class Snake:
 
     def end(self):
         self.play = False
+        self.quit = True

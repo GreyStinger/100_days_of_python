@@ -5,7 +5,7 @@ ROUND_TO = 12
 
 
 def find_location():
-    return ROUND_TO * round(randint(-210, 210) / ROUND_TO), ROUND_TO * round(randint(-210, 210) / ROUND_TO)
+    return ROUND_TO * round(randint(-222, 222) / ROUND_TO), ROUND_TO * round(randint(-222, 222) / ROUND_TO)
 
 
 class Food(Turtle):
