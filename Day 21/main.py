@@ -24,7 +24,6 @@ def main():
     screen.listen()
     screen.onkeypress(key='a', fun=snake.left)
     screen.onkeypress(key='d', fun=snake.right)
-    screen.onkeypress(key='s', fun=snake.new_snake)
     screen.onkeypress(key='Escape', fun=snake.end)
 
     while not snake.quit and not snake.died:
