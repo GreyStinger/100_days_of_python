@@ -1,31 +1,31 @@
 from turtle import Screen
 import snake as s
 
-snake = s.Snake()
-
-
-def window(left, right, new, end):
-    screen = Screen()
-    screen.listen()
-    screen.setup(width=600, height=600)
-    screen.bgcolor('black')
-    screen.title('Snake')
-    screen.mode('logo')
-    screen.tracer(0)
-    screen.listen()
-    screen.onkeypress(key='a', fun=left)
-    screen.onkeypress(key='d', fun=right)
-    screen.onkeypress(key='s', fun=new)
-    screen.onkeypress(key='Escape', fun=end)
-    return screen
-
 
 def main():
+    def window():
+        window_mk = Screen()
+        window_mk.tracer(0)
+        window_mk.setup(width=600, height=600)
+        window_mk.bgcolor('black')
+        window_mk.title('Snake')
+        window_mk.mode('logo')
+        return window_mk
+
+    screen = window()
+
+    snake = s.Snake()
+
+    screen.listen()
+    screen.onkeypress(key='a', fun=snake.left)
+    screen.onkeypress(key='d', fun=snake.right)
+    screen.onkeypress(key='s', fun=snake.new_snake)
+    screen.onkeypress(key='Escape', fun=snake.end)
+
     while snake.play:
         snake.move()
+        screen.update()
 
 
 if __name__ == '__main__':
     main()
-
-window = window(left=snake.left, right=snake.right, new=snake.new_snake, end=snake.end)
