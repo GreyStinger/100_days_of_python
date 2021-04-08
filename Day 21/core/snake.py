@@ -23,7 +23,6 @@ class Snake:
     def __init__(self):
         self.snake = [snake_create(coords) for coords in START_COORDINATES]
         self.snake_head = self.snake[0]
-        self.play = True
         self.died = False
         self.quit = False
 
@@ -47,5 +46,4 @@ class Snake:
         time.sleep(AVERAGE_SLEEP)
 
     def end(self):
-        self.play = False
         self.quit = True

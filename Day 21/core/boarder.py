@@ -11,13 +11,13 @@ class Boarder(Turtle):
         self.pensize(2)
 
     def draw_boarder(self):
-        self.goto(-226, 226)
+        self.goto(-228, 228)
         self.setheading(90)
         self.pendown()
-        self.forward(452)
+        self.forward(456)
         self.right(90)
-        self.forward(452)
+        self.forward(456)
         self.right(90)
-        self.forward(452)
+        self.forward(456)
         self.right(90)
-        self.forward(452)
+        self.forward(456)

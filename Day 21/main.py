@@ -27,12 +27,12 @@ def main():
     screen.onkeypress(key='s', fun=snake.new_snake)
     screen.onkeypress(key='Escape', fun=snake.end)
 
-    screen.update()
-
     while not snake.quit and not snake.died:
         snake.play = True
         snake.died = False
-        while snake.play:
+        while not snake.quit and not snake.died:
+            screen.update()
+
             snake.move()
 
             if snake.snake_head.distance(food) <= 2:
@@ -42,10 +42,12 @@ def main():
 
             if snake.snake_head.xcor() > 222 or snake.snake_head.ycor() > 222 or snake.snake_head.xcor() < -222 or \
                     snake.snake_head.ycor() < -222:
-                snake.play = False
                 snake.died = True
 
-            screen.update()
+            for snake_segment in snake.snake:
+                if snake_segment != snake.snake_head:
+                    if snake.snake_head.distance(snake_segment) <= 0:
+                        snake.died = True
 
         if snake.died:
             board.game_over()
