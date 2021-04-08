@@ -6,7 +6,7 @@ def main():
     def window():
         window_mk = Screen()
         window_mk.tracer(0)
-        window_mk.setup(width=600, height=600)
+        window_mk.setup(width=500, height=500)
         window_mk.bgcolor('black')
         window_mk.title('Snake')
         window_mk.mode('logo')
@@ -21,6 +21,8 @@ def main():
     screen.onkeypress(key='d', fun=snake.right)
     screen.onkeypress(key='s', fun=snake.new_snake)
     screen.onkeypress(key='Escape', fun=snake.end)
+
+    screen.update()
 
     while snake.play:
         snake.move()
