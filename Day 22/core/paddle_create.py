@@ -5,6 +5,7 @@ PADDLE_MOVEMENT = 25
 
 class PaddleCreate(Turtle):
     """A turtle graphics class that creates and moves the paddles in the game"""
+
     def __init__(self, paddle_num):
         super().__init__()
         self.color('white')

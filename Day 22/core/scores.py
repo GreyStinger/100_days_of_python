@@ -9,6 +9,7 @@ Y_DIST = 280
 
 class Scores(Turtle):
     """Keeps track of game scores"""
+
     def __init__(self):
         super().__init__()
         self.color('white')

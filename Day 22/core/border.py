@@ -3,6 +3,7 @@ from turtle import Turtle
 
 class Border(Turtle):
     """A turtle graphics subclass that draws the border for a Ping Pong field automatically"""
+
     def __init__(self):
         super().__init__()
         self.hideturtle()

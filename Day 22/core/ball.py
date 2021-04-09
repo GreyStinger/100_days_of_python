@@ -4,6 +4,7 @@ from turtle import Turtle
 
 class Ball(Turtle):
     """The ball, what more do you want (Super helpful docstring I know)"""
+
     def __init__(self):
         super().__init__()
         self.color('white')
@@ -23,10 +24,12 @@ class Ball(Turtle):
 
     def bounce_y(self):
         self.y_move *= -1
+        self.x_move += 1
 
     def bounce_x(self):
         self.x_move *= -1
-        
+        self.x_move += 1
+
     def move(self):
         self.goto((self.xcor() + self.x_move), (self.ycor() + self.y_move))
 
