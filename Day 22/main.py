@@ -59,7 +59,7 @@ def main():
         ball.move()
         screen.update()
 
-        time.sleep(0.05)
+        time.sleep(ball.move_speed)
 
 
 if __name__ == '__main__':

@@ -30,14 +30,14 @@ class Scores(Turtle):
         self.scores[0] += 1
         self.write_scores()
         self.p_score_screen(1)
-        time.sleep(3)
+        time.sleep(2)
         self.write_scores()
 
     def p_2_scored(self):
         self.scores[1] += 1
         self.write_scores()
         self.p_score_screen(2)
-        time.sleep(3)
+        time.sleep(2)
         self.write_scores()
 
     def p_score_screen(self, player):
