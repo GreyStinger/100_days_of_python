@@ -19,6 +19,8 @@ def main():
     border = Border()
     scores = Scores()
 
+    border.draw_border()
+
     screen.listen()
     screen.onkeypress(key='w', fun=paddle[0].up)
     screen.onkeypress(key='s', fun=paddle[0].down)
@@ -28,9 +30,31 @@ def main():
     screen.onkeypress(key='Escape', fun=systems.stop)
 
     while systems.play:
-        ball.move()
+        ball_y = ball.ycor()
+        ball_x = ball.xcor()
 
+        if ball_y > 344 or ball_y < -344:
+            ball.bounce_y()
+
+        if ball_x > 510 or ball_x < -510:
+            if paddle[0].distance(ball) < 50 or paddle[1].distance(ball) < 50:
+                ball.bounce_x()
+
+        if ball_x > 550 or ball_x < -550:
+            if ball_x > 550:
+                scores.p_1_scored()
+                for i in range(2):
+                    paddle[i].reset()
+            else:
+                scores.p_2_scored()
+                for i in range(2):
+                    paddle[i].reset()
+
+            ball.reset()
+
+        ball.move()
         screen.update()
+
         time.sleep(0.05)
 
 

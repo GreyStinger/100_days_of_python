@@ -1,8 +1,9 @@
 import random
+import time
 from turtle import Turtle
 
 # Constants for PaddleCreate class
-PADDLE_MOVEMENT = 20
+PADDLE_MOVEMENT = 25
 
 # Constants for Scores class
 ALIGNMENT = 'center'
@@ -12,7 +13,7 @@ Y_DIST = 280
 
 
 class Systems:
-    """A systems class that will do everything from starting and stopping a match to clearing game fields"""
+    """A systems class monitors gameplay"""
     def __init__(self):
         self.play = True
 
@@ -30,18 +31,27 @@ class PaddleCreate(Turtle):
         self.setheading(0)
         self.shape('square')
         self.shapesize(stretch_len=5.8, stretch_wid=0.8)
-        if paddle_num == 0:
+        self.paddle_num = paddle_num
+        self.position()
+
+    def up(self):
+        if self.ycor() < 300:
+            self.goto(self.xcor(), self.ycor() + PADDLE_MOVEMENT)
+
+    def down(self):
+        if self.ycor() > -300:
+            self.goto(self.xcor(), self.ycor() - PADDLE_MOVEMENT)
+
+    def reset(self):
+        self.position()
+
+    def position(self):
+        if self.paddle_num == 0:
             self.goto(-540, 0)
-        elif paddle_num == 1:
+        elif self.paddle_num == 1:
             self.goto(540, 0)
         else:
             raise Exception('Invalid Paddle Number')
-
-    def up(self):
-        self.goto(self.xcor(), self.ycor() + PADDLE_MOVEMENT)
-
-    def down(self):
-        self.goto(self.xcor(), self.ycor() - PADDLE_MOVEMENT)
 
 
 class Ball(Turtle):
@@ -52,36 +62,28 @@ class Ball(Turtle):
         self.speed('fast')
         self.penup()
         self.shape('circle')
+        self.x_move = 10
+        self.y_move = 10
         self.heading_set()
 
     def heading_set(self):
-        self.setheading(round(30 * (random.randint(0, 360) / 30)))
+        self.y_move = random.randint(8, 12)
+        if random.randint(0, 2) == 1:
+            self.y_move *= -1
+        if random.randint(0, 2) == 1:
+            self.x_move *= -1
 
-    def rebound_check(self):
-        heading = self.heading()
+    def bounce_y(self):
+        self.y_move *= -1
 
-        if  0 <= heading_set <= 90 or 180 <= heading_set <= 270:
-            self.rebound_right(heading)
-        elif 90 <= heading_set <= 180 or 270 <= heading_set <= 360:
-            self.rebound_left(heading)
-
-
-    # TODO make rebounds
-    # Rebounds need to rebound at a controlled variable angle
-    def rebound_right(self, heading):
-        pass
-
-    def rebound_left(self, heading):
-        pass
-
+    def bounce_x(self):
+        self.x_move *= -1
+        
     def move(self):
-        if self.xcor() == 360 or self.xcor() == -360:
-            self.rebound_check()
-
-        self.forward(10)
+        self.goto((self.xcor() + self.x_move), (self.ycor() + self.y_move))
 
     def reset(self):
-        self.clear()
+        self.goto(0, 0)
         self.heading_set()
 
 
@@ -97,9 +99,8 @@ class Border(Turtle):
         self.pendown()
         self.setheading(90)
         self.pensize(6)
-        self.draw_boarder()
 
-    def draw_boarder(self):
+    def draw_border(self):
         for _ in range(2):
             self.forward(1126)
             self.setheading(self.heading() + 90)
@@ -134,7 +135,7 @@ class Scores(Turtle):
         self.speed('fast')
         self.hideturtle()
         self.penup()
-        self.scores = (0, 0)
+        self.scores = [0, 0]
         self.write_scores()
 
     def write_scores(self):
@@ -147,7 +148,20 @@ class Scores(Turtle):
     def p_1_scored(self):
         self.scores[0] += 1
         self.write_scores()
+        self.p_score_screen(1)
+        time.sleep(3)
+        self.write_scores()
 
     def p_2_scored(self):
         self.scores[1] += 1
         self.write_scores()
+        self.p_score_screen(2)
+        time.sleep(3)
+        self.write_scores()
+
+    def p_score_screen(self, player):
+        self.goto(0, -40)
+        if player == 1:
+            self.write(arg=f'  Player {player} Scored!  ', move=False, align='left', font=FONT)
+        else:
+            self.write(arg=f'  Player {player} Scored!  ', move=False, align='right', font=FONT)
