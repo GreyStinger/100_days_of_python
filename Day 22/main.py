@@ -1,7 +1,11 @@
 import time
 from turtle import Screen
 
-from game_systems import Systems, PaddleCreate, Ball, Border, Scores
+from core.ball import Ball
+from core.border import Border
+from core.game_systems import Systems
+from core.paddle_create import PaddleCreate
+from core.scores import Scores
 
 
 def main():
