@@ -12,3 +12,6 @@ class Player(Turtle):
         self.penup()
         self.color('black')
         self.goto(STARTING_POSITION)
+
+    def player_move(self):
+        self.goto(self.xcor(), self.ycor() + 10)
