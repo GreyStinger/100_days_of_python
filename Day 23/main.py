@@ -33,7 +33,7 @@ def timer():
     return True
 
 
-def random_check():
+def random_gen():
     if random.randint(0, 2) == 0:
         cars.create_car()
 
@@ -42,8 +42,14 @@ screen.listen()
 screen.onkeypress(key='Escape', fun=stop)
 screen.onkeypress(key='w', fun=player.player_move)
 
+for _ in range(50):
+    random_gen()
+    cars.move_cars()
+
+
 while game_is_on:
-    random_check()
+    random_gen()
     cars.move_cars()
     time.sleep(0.1)
     screen.update()
+    print(cars.cars)

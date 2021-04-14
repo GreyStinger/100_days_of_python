@@ -25,6 +25,11 @@ class CarManager:
         car.goto(find_pos())
         self.cars.append(car)
 
+    def car_removal(self, car):
+        if car.xcor() < -340:
+            self.cars.remove(car)
+
     def move_cars(self):
         for car in self.cars:
             car.goto(car.xcor() - STARTING_MOVE_DISTANCE, car.ycor())
+            self.car_removal(car)
