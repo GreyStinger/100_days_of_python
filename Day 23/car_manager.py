@@ -9,7 +9,7 @@ found_pos_list = []
 
 
 def find_pos():
-    return 296, 24 * round(random.randint(-240, 240) / 24)
+    return 296, 26 * round(random.randint(-240, 240) / 26)
 
 
 class CarManager:
@@ -22,6 +22,7 @@ class CarManager:
         car.penup()
         car.color(random.choice(COLORS))
         car.speed('fast')
+        car.shapesize(stretch_wid=2, stretch_len=1)
         car.goto(find_pos())
         self.cars.append(car)
 

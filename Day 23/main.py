@@ -34,7 +34,7 @@ def timer():
 
 
 def random_gen():
-    if random.randint(0, 2) == 0:
+    if random.randint(0, 3) == 0:
         cars.create_car()
 
 
